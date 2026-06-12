@@ -2,18 +2,24 @@ def merge_sort(arr)
   # cut it in half
 
   left_arr = arr[0...arr.length / 2]; right_arr = arr[arr.length / 2...arr.length]
-  if left_arr == []
-    p right_arr
-    return right_arr
-  end
 
-  macro_arr = []; macro_arr << left_arr; macro_arr << right_arr
+
+  macro_arr = []
+  
+  if left_arr.empty?
+    macro_arr << right_arr
+  else 
+    macro_arr << left_arr; macro_arr << right_arr
+  end 
   p macro_arr
+  return macro_arr if left_arr.empty?
   # sort each half
   macro_arr.each do |a|
-    break if a.empty?
     merge_sort(a)
   end
+
+  
+
 
   # merge
   # recurse?
