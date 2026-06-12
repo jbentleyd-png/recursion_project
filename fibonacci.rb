@@ -31,6 +31,14 @@ end
 
 
 p rec_fibs(1)
+p fibs_it(1)
+
 p rec_fibs(2)
+p fibs_it(2)
+
 p rec_fibs(3)
+p fibs_it(3)
+
 p rec_fibs(8)
+p fibs_it(8)
+
