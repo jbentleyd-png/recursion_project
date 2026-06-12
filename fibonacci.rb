@@ -15,8 +15,22 @@ def fibs_it(num)
   return initial_array[0...num]
 end
 
-p fibs_it(1)
-p fibs_it(2)
-p fibs_it(3)
-p fibs_it(8)
 
+
+
+def rec_fibs(num, initial_array = [0,1])  
+  return nil unless num.is_a?(Integer) && num > 0
+  
+  return initial_array[0...num] if num <= 2
+  initial_array << initial_array[-1] + initial_array[-2]
+  
+  rec_fibs(num - 1, initial_array)
+  initial_array
+
+end
+
+
+p rec_fibs(1)
+p rec_fibs(2)
+p rec_fibs(3)
+p rec_fibs(8)
