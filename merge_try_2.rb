@@ -6,6 +6,7 @@ def merge_sort(arr)
   output = []
   if right_arr.length == 2
     right_arr =  merge_sort(right_arr)
+    left_arr = merge_sort(left_arr)
   end
 
   until left_arr.empty? || right_arr.empty?
@@ -19,3 +20,4 @@ p merge_sort([])
 p merge_sort([73])
 p merge_sort([2, 1])
 p merge_sort([3, 2, 1])
+p merge_sort([4, 3, 2, 1])
