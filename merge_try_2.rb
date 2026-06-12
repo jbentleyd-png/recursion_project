@@ -7,8 +7,7 @@ def merge_sort(arr)
 
   # recurse:
   if right_arr.length >= 2
-    right_arr =  merge_sort(right_arr)
-    left_arr = merge_sort(left_arr)
+    left_arr = merge_sort(left_arr); right_arr =  merge_sort(right_arr)
   end
   
   # sort:
@@ -22,10 +21,10 @@ end
 
 
 
-# p merge_sort([])
-# p merge_sort([73])
-# p merge_sort([2, 1])
-# p merge_sort([3, 2, 1])
+p merge_sort([])
+p merge_sort([73])
+p merge_sort([2, 1])
+p merge_sort([3, 2, 1])
 p merge_sort([4, 3, 2, 1])
 p merge_sort([3, 2, 1, 13, 8, 5, 0, 1])
 p merge_sort([105, 79, 100, 110])
