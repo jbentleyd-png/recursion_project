@@ -4,6 +4,10 @@ def merge_sort(arr)
 
   left_arr = arr[0...arr.length / 2]; right_arr = arr[arr.length / 2...arr.length]
   output = []
+  if right_arr.length == 2
+    right_arr =  merge_sort(right_arr)
+  end
+
   until left_arr.empty? || right_arr.empty?
     left_arr[0] < right_arr[0] ? output << left_arr.delete_at(0) : output << right_arr.delete_at(0)
   end
